@@ -6,7 +6,7 @@ from sqlalchemy import String, Boolean
 from app.db import Base
 
 
-class Room(Base):
+class Tour(Base):
     __tablename__ = "tours"
 
     id: Mapped[int] = mapped_column(primary_key=True)
