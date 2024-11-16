@@ -17,8 +17,8 @@ def index():
         return render_template("index.html", tours=tours)
 
 
-@tour_blueprint.route("/reserve_tour/", methods=["POST", "GET"])
-def reserve_tour():
+@tour_blueprint.route("/add_tour/", methods=["POST", "GET"])
+def add_tour():
     if request.method == "POST":
         with Session() as session:
             number = request.form.get("number")

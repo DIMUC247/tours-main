@@ -7,15 +7,15 @@
 
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-inner">
-    {% for room in rooms %}
+    {% for tour in tours %}
       {% if loop.index == 1 %}
         <div class="carousel-item active">
       {% else %}
         <div class="carousel-item">
       {% endif %}
           <div class="carousel-caption d-none d-md-block">
-              <h5>№ {{ room.number }}</h5>
-              <p>{{ room.name }}</p>
+              <h5>№ {{ tour.number }}</h5>
+              <p>{{ tour.name }}</p>
               <a class="btn btn-primary" href="{{ url_for('tours.reserve', id=tour.id) }}">Забронювати</a>
           </div>
         </div>

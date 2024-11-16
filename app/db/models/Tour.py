@@ -11,7 +11,7 @@ class Tour(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     number: Mapped[int] = mapped_column(unique=True)
-    name: Mapped[Optional[str]] = mapped_column((String(50)), nullable=True)
+    name: Mapped[Optional[str]] = mapped_column(String(50), nullable=True)
     is_reserved: Mapped[bool] = mapped_column(Boolean(), default=False)
 
     def __str__(self):
