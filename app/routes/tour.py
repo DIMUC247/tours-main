@@ -50,8 +50,8 @@ def manage_tours():
         return render_template("manage_tours.html", tours=tours)
 
 
-@tour_blueprint.get("/delete/<int:id>")
-def delete_tour(id):
+@tour_blueprint.get("/del/<int:id>")
+def del_tour(id):
     with Session() as session:
         tour = session.query(Tour).where(Tour.id == id).first()
         session.delete(tour)

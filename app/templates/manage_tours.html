@@ -12,8 +12,7 @@
           {% if tour.is_reserved %}
             <button class="btn btn-success">Зарезервовано</button>
           {% endif %}
-          <a href="{{ url_for('tours.delete_tour', id=tour.id)}}" class="btn btn-danger">Видалити тур</a>
-          <a href="{{ url_for('tours.edit_tour', id=tour.id)}}" class="btn btn-primary">Редагувати тур</a>
+          <a href="{{ url_for('tours.del_tour', id=tour.id)}}" class="btn btn-danger">Видалити тур</a>
         </div>
       </div>
     </div>
